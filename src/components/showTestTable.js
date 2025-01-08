@@ -1,15 +1,11 @@
 import React, {useState, useEffect} from "react"
 
-
-
-
-
 const ShowTestTable = ({fetchData}) => {
     const [content, setContent] = useState(<div>To jest nowe miejsce</div>);
   
     useEffect(() => {
       console.log('useEffect is running');
-      fetch('http://192.168.0.207:3033/api/getTables')
+      fetch('http://apollo.mguard.pl/api/getTables')
         .then(res => {
           console.log('response:', res);
           return res.json();
