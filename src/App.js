@@ -9,10 +9,10 @@ const App = () => {
   const [data, setData] = useState([]);
 
   const fetchData = (tableName) => {
-    fetch(`http://192.168.0.207:3033/api/gettable?tableName=${tableName}`)
+    fetch(`https://apollo.mguard.pl/api/gettable?tableName=${tableName}`)
       .then(response => response.json())
       .then(data => setData(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .catch(error => console.error('Error fetching dataOE:', error));
   };
 
   return (

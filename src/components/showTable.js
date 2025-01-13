@@ -1,7 +1,11 @@
 // ShowTable.js
 import React from 'react';
 
-const ShowTable = ({ data, onDeleteRow, onEditRow }) => {
+const onDeleteRow = (row) => {
+  console.log(`Deleting row: ${JSON.stringify(row)}`);
+};
+
+const ShowTable = ({ data, onEditRow }) => {
   if (!data || data.length === 0) {
     return <div>No data available</div>;
   }
